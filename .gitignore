@@ -27,3 +27,10 @@
 *.exe
 *.out
 *.app
+
+# QtCreator
+Makefile
+Makefile.Debug
+Makefile.Release
+debug/
+ui_mainwindow.h
