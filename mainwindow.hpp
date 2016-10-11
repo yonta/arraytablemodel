@@ -2,6 +2,7 @@
 #define MAINWINDOW_HPP
 
 #include <QMainWindow>
+#include "qtablemodel.hpp"
 
 namespace Ui {
 class MainWindow;
@@ -17,6 +18,7 @@ public:
 
 private:
   Ui::MainWindow *ui;
+  QTableModel *qtmodel;
 };
 
 #endif // MAINWINDOW_HPP
