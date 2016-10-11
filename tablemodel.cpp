@@ -103,7 +103,8 @@ QVariant TableModel::data(const QModelIndex &index, int role) const
       index.column() < 0 || index.column() >= header.size())
     return QVariant();
 
-  if (role == Qt::DisplayRole) return body[index.row()][index.column()];
+  if (role == Qt::DisplayRole || role == Qt::EditRole)
+    return body[index.row()][index.column()];
 
   return QVariant();
 }
