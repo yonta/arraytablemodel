@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include "qtablemodel.hpp"
 #include "tablemodel.hpp"
+#include "comboboxitemdelegate.hpp"
 
 MainWindow::MainWindow(QWidget *parent) :
   QMainWindow(parent),
@@ -21,6 +22,9 @@ MainWindow::MainWindow(QWidget *parent) :
   }
   ui->tableView->setModel(qtmodel);
 
+  ComboBoxItemDelegate *combo1 = new ComboBoxItemDelegate(ui->tableView);
+  ui->tableView->setItemDelegateForColumn(0, combo1);
+
   // TableModel
   tmodel->setHeaderData(0, Qt::Horizontal, tr("Name"), Qt::DisplayRole);
   tmodel->setHeaderData(1, Qt::Horizontal, tr("Address"), Qt::DisplayRole);
@@ -32,6 +36,9 @@ MainWindow::MainWindow(QWidget *parent) :
     tmodel->setData(index1, tr("My Address"));
   }
   ui->tableView_2->setModel(tmodel);
+
+  ComboBoxItemDelegate *combo = new ComboBoxItemDelegate(ui->tableView_2);
+  ui->tableView_2->setItemDelegateForColumn(0, combo);
 }
 
 MainWindow::~MainWindow()

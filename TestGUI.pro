@@ -16,11 +16,13 @@ SOURCES += \
   main.cpp \
   mainwindow.cpp \
   qtablemodel.cpp \
-  tablemodel.cpp
+  tablemodel.cpp \
+  comboboxitemdelegate.cpp
 
 HEADERS += \
   mainwindow.hpp \
   qtablemodel.hpp \
-  tablemodel.hpp
+  tablemodel.hpp \
+  comboboxitemdelegate.hpp
 
 FORMS    += mainwindow.ui
