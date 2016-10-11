@@ -81,7 +81,7 @@ QVariant QTableModel::data(const QModelIndex &index, int role) const
   if (index.row() >= listOfPairs.size() || index.row() < 0)
     return QVariant();
 
-  if (role == Qt::DisplayRole) {
+  if (role == Qt::DisplayRole || role == Qt::EditRole) {
     QPair<QString, QString> pair = listOfPairs.at(index.row());
 
     if (index.column() == 0)
