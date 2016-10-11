@@ -18,7 +18,7 @@
     <item>
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">
@@ -36,28 +36,28 @@
           <item row="1" column="3">
            <widget class="QPushButton" name="buttonRight">
             <property name="text">
-             <string>PushButton</string>
+             <string>Right</string>
             </property>
            </widget>
           </item>
           <item row="0" column="1">
            <widget class="QPushButton" name="buttonUp">
             <property name="text">
-             <string>PushButton</string>
+             <string>Up</string>
             </property>
            </widget>
           </item>
           <item row="1" column="1">
            <widget class="QPushButton" name="buttonDown">
             <property name="text">
-             <string>PushButton</string>
+             <string>Down</string>
             </property>
            </widget>
           </item>
           <item row="1" column="0">
            <widget class="QPushButton" name="buttonLeft">
             <property name="text">
-             <string>PushButton</string>
+             <string>Left</string>
             </property>
            </widget>
           </item>
@@ -69,6 +69,11 @@
        <attribute name="title">
         <string>Tab 2</string>
        </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QTableView" name="tableView_2"/>
+        </item>
+       </layout>
       </widget>
      </widget>
     </item>

@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "qtablemodel.hpp"
+#include "tablemodel.hpp"
 
 namespace Ui {
 class MainWindow;
@@ -19,6 +20,7 @@ public:
 private:
   Ui::MainWindow *ui;
   QTableModel *qtmodel;
+  TableModel *tmodel;
 };
 
 #endif // MAINWINDOW_HPP
