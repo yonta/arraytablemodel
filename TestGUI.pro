@@ -16,11 +16,11 @@ SOURCES += \
   main.cpp \
   mainwindow.cpp \
   qtablemodel.cpp \
-#  tablemodel.cpp
+  tablemodel.cpp
 
 HEADERS += \
   mainwindow.hpp \
   qtablemodel.hpp \
-#  tablemodel.hpp
+  tablemodel.hpp
 
 FORMS    += mainwindow.ui
