@@ -92,7 +92,8 @@ QVariant QTableModel::data(const QModelIndex &index, int role) const
   return QVariant();
 }
 
-QVariant QTableModel::headerData(int section, Qt::Orientation orientation, int role) const
+QVariant QTableModel::headerData(int section, Qt::Orientation orientation,
+                                 int role) const
 {
   if (role != Qt::DisplayRole)
     return QVariant();
@@ -139,7 +140,8 @@ bool QTableModel::removeRows(int position, int rows, const QModelIndex &index)
   return true;
 }
 
-bool QTableModel::setData(const QModelIndex &index, const QVariant &value, int role)
+bool QTableModel::setData(const QModelIndex &index, const QVariant &value,
+                          int role)
 {
   if (index.isValid() && role == Qt::EditRole) {
     int row = index.row();
