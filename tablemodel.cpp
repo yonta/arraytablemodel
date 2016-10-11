@@ -127,6 +127,17 @@ QVariant TableModel::headerData(int section, Qt::Orientation orientation,
   return QVariant();
 }
 
+bool TableModel::setHeaderData(int section, Qt::Orientation orientation,
+                               const QVariant &value, int role)
+{
+  if (section < 0 || section >= header.size()) return false;
+
+  if (orientation == Qt::Horizontal && role == Qt::DisplayRole)
+    header.replace(section, value.toString());
+
+  return false;
+}
+
 bool TableModel::insertRows(int position, int rows, const QModelIndex &index)
 {
   Q_UNUSED(index);
